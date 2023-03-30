@@ -1,0 +1,41 @@
+{
+  "name": "ejmanager",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "predev": "ts-node --project ./tsconfig.node.json ./scripts/genAntdCss.tsx",
+    "prebuild": "ts-node --project ./tsconfig.node.json ./scripts/genAntdCss.tsx"
+  },
+  "dependencies": {
+    "@ant-design/cssinjs": "^1.7.1",
+    "@ant-design/static-style-extract": "^1.0.1",
+    "@babel/runtime": "^7.21.0",
+    "@next/font": "^13.2.4",
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.31",
+    "@types/react-dom": "18.0.11",
+    "antd": "^5.3.3",
+    "eslint": "8.37.0",
+    "eslint-config-next": "13.2.4",
+    "next": "13.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.3.0",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.5.0"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!antd|@ant-design|rc-.+?|@babel/runtime).+(js|jsx)$"
+    ]
+  }
+}
